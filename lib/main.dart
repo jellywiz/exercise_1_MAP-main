@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Exercise 1 MAP',
       theme: ThemeData(
-        primarySwatch: Colors.brown,
+        primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'My Icon'),
     );
@@ -151,30 +151,29 @@ class _MyHomePageState extends State<MyHomePage> {
               : [],
         ),
         drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              CheckboxListTile(
-                title: Text('Allow resize?'),
-                value: _resize,
-                onChanged: (bool value) {
-                  setState(() {
-                    _resize = value;
-                  });
-                },
-              ),
-              CheckboxListTile(
-                title: Text('Allow chnage primer color?'),
-                value: _recolor,
-                onChanged: (bool value) {
-                  setState(() {
-                    _recolor = value;
-                  });
-                },
-              ),
-            ],
-          ),
-        ),
+            child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            CheckboxListTile(
+              title: Text('Allow resize?'),
+              value: _resize,
+              onChanged: (bool value) {
+                setState(() {
+                  _resize = value;
+                });
+              },
+            ),
+            CheckboxListTile(
+              title: Text('Allow chang primer color?'),
+              value: _recolor,
+              onChanged: (bool value) {
+                setState(() {
+                  _recolor = value;
+                });
+              },
+            )
+          ],
+        )),
         body: Center(
           child: Container(
             child: Column(
@@ -183,7 +182,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 150, 0, 0),
                   child: Icon(
-                    Icons.alarm,
+                    Icons.adb,
                     size: _size,
                     color: Color.fromRGBO(_red, _green, _blue, 1),
                   ),
@@ -197,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Expanded(
                             child: Slider(
-                              activeColor: Colors.brown,
+                              activeColor: Colors.blue,
                               value: _red.toDouble(),
                               min: 0.0,
                               max: 255.0,
@@ -227,7 +226,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Expanded(
                             child: Slider(
-                              activeColor: Colors.brown,
+                              activeColor: Colors.blue,
                               value: _green.toDouble(),
                               min: 0.0,
                               max: 255.0,
@@ -257,7 +256,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Expanded(
                             child: Slider(
-                              activeColor: Colors.brown,
+                              activeColor: Colors.blue,
                               value: _blue.toDouble(),
                               min: 0.0,
                               max: 255.0,
